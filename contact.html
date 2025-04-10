@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> CONTACT US </h1>
+        <div class="header-controls">
+            <button id="themeToggle">🌓 Switch Theme</button>
+            <div id="clock">00:00:00</div>
+        </div>
+    </header>
+    
+    <main>
+        <form id="contactForm" class="contact-form">
+            <div class="form-group">
+                <label for="nameInput">Your Name:</label>
+                <input type="text" id="nameInput" placeholder="Enter your name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="emailInput">Your Email:</label>
+                <input type="email" id="emailInput" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="messageInput">Your Message:</label>
+                <textarea id="messageInput" rows="5" placeholder="Type your message here" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn">📩 Send Message</button>
+        </form>
+        
+        <div id="response" class="response-message"></div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 INTERACTIVE WEBSITE LAB </p>
+        <nav>
+            <a href="index.html"> RETURN HOME</a>
+        </nav>
+    </footer>
+    
+    <script src="script.js" defer></script>
+</body>
+</html>

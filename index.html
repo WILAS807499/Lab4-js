@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> INTERACTIVE WEBSITE LAB </h1>
+        <div class="header-controls">
+            <button id="themeToggle">🌓 Switch Theme</button>
+            <div id="clock">00:00:00</div>
+        </div>
+    </header>
+    
+    <main>
+        <section class="user-section">
+            <h2>OUR TEAM MEMBERS</h2>
+            <button id="loadUsersBtn" class="btn">👥 Load Users</button>
+            <div id="loadingIndicator" style="display: none;">Loading users...</div>
+            <ul id="userList" class="user-list"></ul>
+        </section>
+
+        <section class="faq-section">
+            <h2> FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="faq-item">
+                <h3 class="question">What is this website about? <span class="toggle-icon">+</span></h3>
+                <p class="answer">This is a demo project for CSC 4035 Lab 4, demonstrating interactive web features with JavaScript.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="question">Where does the user data come from? <span class="toggle-icon">+</span></h3>
+                <p class="answer">The user data is fetched from JSONPlaceholder, a free fake API for testing and prototyping.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="question">How do I contact you? <span class="toggle-icon">+</span></h3>
+                <p class="answer">Use the contact form on our contact page to send us a message.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025  INTERACTIVE WEBSITE LAB </p>
+        <nav>
+            <a href="contact.html"> CONTACT US </a>
+        </nav>
+    </footer>
+    
+    <script src="script.js" defer></script>
+</body>
+</html>

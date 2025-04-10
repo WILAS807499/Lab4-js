@@ -1,0 +1,284 @@
+/* Base Styles */
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #166088;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --transition-speed: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    transition: all var(--transition-speed) ease;
+}
+
+.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-theme header {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+}
+
+.dark-theme footer {
+    background-color: #1a1a1a;
+    border-top: 1px solid #333;
+}
+
+.dark-theme .btn {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-theme input,
+.dark-theme textarea {
+    background-color: #2d2d2d;
+    color: #fff;
+    border-color: #444;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color var(--transition-speed);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Theme Toggle */
+#themeToggle {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+}
+
+/* Clock */
+#clock {
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+/* User Section */
+.user-section {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .user-section {
+    background-color: #1e1e1e;
+}
+
+.user-list {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.user-list li {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background-color: #f0f4f8;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dark-theme .user-list li {
+    background-color: #2d2d2d;
+}
+
+.user-list li .user-email {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.dark-theme .user-list li .user-email {
+    color: #aaa;
+}
+
+#loadingIndicator {
+    margin: 1rem 0;
+    font-style: italic;
+    color: #666;
+}
+
+/* FAQ Section */
+.faq-section {
+    margin-bottom: 2rem;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.dark-theme .faq-item {
+    border-color: #444;
+}
+
+.question {
+    padding: 1.25rem;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    transition: background-color var(--transition-speed);
+}
+
+.dark-theme .question {
+    background-color: #2d2d2d;
+}
+
+.question:hover {
+    background-color: #e9ecef;
+}
+
+.dark-theme .question:hover {
+    background-color: #3d3d3d;
+}
+
+.toggle-icon {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.answer {
+    padding: 0 1.25rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-speed), padding var(--transition-speed);
+}
+
+.answer.visible {
+    padding: 0 1.25rem 1.25rem;
+    max-height: 500px;
+}
+
+/* Contact Form */
+.contact-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.dark-theme .contact-form {
+    background-color: #1e1e1e;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-family: inherit;
+    transition: border-color var(--transition-speed);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.response-message {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    display: none;
+}
+
+.dark-theme .response-message {
+    background-color: #1b5e20;
+    color: #e8f5e9;
+}
